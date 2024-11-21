@@ -1,0 +1,57 @@
+﻿
+@model List<MyPortolio.DAL.Entities.Portfolio>
+<section id="works" class="s-works target-section">
+
+    <div class="row narrow section-intro has-bottom-sep">
+        <div class="col-full">
+            <h3>Portfolio</h3>
+            <h1>See My Latest Projects</h1>
+
+        </div>
+    </div>
+    
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick">
+                
+                    <div class="item-folio">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item-folio__thumb">
+                            <a href=@item.ImageUrl class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                <img src="/hola-master/images/portfolio/beetle.jpg"
+                                     srcset="/hola-master/images/portfolio/beetle.jpg 1x, /hola-master/images/portfolio/beetle@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                @item.Tittle
+                            </h3>
+                            <p class="item-folio__cat">
+                                @item.SubTittle
+                            </p>
+                        </div>
+
+                        <a href=@item.Url class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>@item.Description</p>
+                            
+                        </div>
+                    }
+                    </div>
+               
+                </div>
+                
+
+            </div>
+        </div> <!-- end masonry -->
+   
+    
+
+</section> <!-- end works -->

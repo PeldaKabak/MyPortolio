@@ -1,0 +1,62 @@
+﻿@model List<MyPortolio.DAL.Entities.Feature>
+
+<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="https://i.hizliresim.com/9sqlin5.png?_gl=1*12c9umj*_ga*MTA2NDU5MDc4OS4xNzMxNTgzNjQ2*_ga_M9ZRXYS2YN*MTczMTU4MzY0NS4xLjEuMTczMTU4Mzc0MS4yOC4wLjA." data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+
+    @foreach(var item in Model)
+    {
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>@item.Tittle</h3>
+                <br />
+
+                <h1>
+                    @*I am Pelda Kabak. <br>
+                    I am a Software Developer.*@
+                    @item.Description
+                </h1>
+
+
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        Latest Projects
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div> <!-- end home-content -->
+    }
+
+
+   
+
+    <ul class="home-social">
+        <li>
+            <a href="https://www.linkedin.com/in/pelda-kabak-84a7911bb/"><i class="im im-linkedln" aria-hidden="true"></i><span>Linkedln</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/PeldaKabak"><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/peldakabak_/"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+
+    </ul>
+    <!-- end home-social -->
+
+</section> <!-- end s-home -->

@@ -1,0 +1,43 @@
+﻿
+<section id="about" class="s-about target-section">
+
+    <div class="row narrow section-intro has-bottom-sep">
+        <div class="col-full text-center">
+            <h3>About</h3>
+            <h1>@ViewBag.aboutTitle</h1>
+            <p class="lead">
+                @ViewBag.aboutSubDescription
+            </p>
+        </div>
+    </div>
+
+    <div class="row about-content">
+
+        <div class="col-six tab-full left">
+            <h3>Hi!</h3>
+
+            @*<p>I graduated in June 2024 from Manisa Celal Bayar University, Hasan Ferdi Turgutlu Faculty of Technology, Department of Software Engineering. Throughout my studies, I focused on both my technical and personal development, enhancing my knowledge and skills. After graduation, I continued working at the company where I completed a long-term internship in Power Platform, gaining further experience in application development. I also had the opportunity to teach C# for a short period, which helped me develop skills in sharing my knowledge with others. Additionally, I have worked on various web development projects using technologies like ASP.NET and MVC.</p>
+
+            <p>
+                In addition to my technical expertise, I value my social life and personal interests. During university and through local municipalities, I participated in artistic activities such as theater and choir. Thanks to my strong communication skills and ability to collaborate in teams, I am able to contribute effectively to projects. I am committed to improving myself in both technical areas and interpersonal skills.
+            </p>*@
+            @ViewBag.aboutDetail
+        </div>
+
+        @await Component.InvokeAsync("_SkillComponentPartial")
+
+    </div> <!-- end about-content -->
+
+    <div class="row about-content about-content--buttons">
+
+        <div class="col-six tab-full left">
+            <a href="#0" class="btn btn--primary full-width">Download My CV</a>
+        </div>
+        <div class="col-six tab-full right">
+            <a href="#0" class="btn full-width">Hire Me Now</a>
+        </div>
+
+    </div> <!-- end about-content buttons -->
+    @await Component.InvokeAsync("_ExperienceComponentPartial")
+
+</section> <!-- end about -->
